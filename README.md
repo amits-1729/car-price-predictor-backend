@@ -2,7 +2,7 @@
 
 This project is a **Machine Learning backend system** that predicts the price of a used car based on several features such as company, model, year, fuel type, and kilometers driven.
 
-The project focuses on **data preprocessing, model training, and price prediction using machine learning algorithms**.
+The project focuses on **data preprocessing, model training, and price prediction using machine learning algorithm**.
 
 ---
 
@@ -34,9 +34,6 @@ The following steps were followed in this project:
 
 ---
 
-
----
-
 ## 📊 Features Used for Prediction
 
 The model predicts car prices using the following features:
@@ -58,18 +55,13 @@ The model predicts car prices using the following features:
 - Matplotlib
 - Seaborn
 - Jupyter Notebook
+- FastAPI
 
 ---
 
 ## 🏗 Model Used
 
-A **Machine Learning Regression Model** is used to predict car prices.
-
-Possible algorithms used:
-
-- Linear Regression
-- Decision Tree Regressor
-- Random Forest Regressor
+A **Linear Regression Model** is used to predict car prices.
 
 The trained model is saved using **pickle (.pkl)** for future predictions.
 
