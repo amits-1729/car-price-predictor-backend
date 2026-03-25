@@ -6,7 +6,7 @@ import pandas as pd
 from datetime import datetime
 
 
-with open("LinearRegressionModel.pkl", "rb") as f:
+with open("LRmodel.pkl", "rb") as f:
     pipe = pickle.load(f)
 
 
