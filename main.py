@@ -41,7 +41,11 @@ def predict_car_price(data: UserInput):
     }])
 
     prediction = pipe.predict(inputed_data)
-    if prediction[0]<0:
-        prediction[0] = 0.0
-    final_prediction = (f"{round(float(prediction[0]), 2)} Rs.")
+    price = prediction[0]
+
+    if price < 0:
+        price = 0.0
+
+    final_prediction = f"{round(float(price), 2)} Rs."
+
     return {"prediction": final_prediction}
