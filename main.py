@@ -15,11 +15,11 @@ app = FastAPI()
 class UserInput(BaseModel):
     name: Annotated[str, Field(..., description='Name of the car', examples=['Maruti Suzuki Swift'])]
     company: Annotated[str, Field(..., description='Model of the car')]
-    year: Annotated[int, Field(..., description='Model is of year')]
+    year: Annotated[int, Field(...,description='Model is of year')]
     kms_driven: Annotated[int, Field(..., gt=0, description='Mileage of car')]
     fuel_type: Annotated[Literal['Petrol', 'Diesel', 'LPG'], Field(..., description='Fuel type', examples=['Petrol'])]
 
-    @field_validator('year')
+    @field_validator('year') 
     @classmethod
     def validate_year(cls, value):
         if value not in range(1950, datetime.now().year + 1):
@@ -41,6 +41,7 @@ def predict_car_price(data: UserInput):
     }])
 
     prediction = pipe.predict(inputed_data)
-    if prediction<0:
+    if prediction[0]<0:
         prediction = 0.0
-    return {"prediction": round(float(prediction[0]), 2)}
+    final_prediction = (f"{round(float(prediction[0]), 2)} Rs.")
+    return {"prediction": final_prediction}

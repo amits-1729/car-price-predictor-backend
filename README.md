@@ -1,97 +1,89 @@
-🚗 Car Price Prediction System
+# 🚗 Car Price Predictor (Machine Learning Backend)
 
-An end-to-end Machine Learning web application that predicts the price of a used car based on user inputs.
-The project includes a FastAPI backend for model inference and a Streamlit frontend for user interaction.
+This project is a **Machine Learning backend system** that predicts the price of a used car based on several features such as company, model, year, fuel type, and kilometers driven.
 
-📌 Project Overview
+The project focuses on **data preprocessing, model training, and price prediction using machine learning algorithms**.
 
-This project demonstrates how to take a Machine Learning model from development to deployment by:
-Training a regression model using real-world car data
-Saving the trained ML pipeline
-Exposing predictions via a REST API using FastAPI
-Building an interactive UI using Streamlit
-Deploying backend and frontend as separate services
-The system allows users to input car details and get a predicted price instantly.
+---
 
-🛠 Tech Stack
+## 📌 Project Overview
 
-Programming Language
-Python
-Machine Learning
-scikit-learn
-pandas
-numpy
+Used car prices depend on multiple factors. This project builds a **regression model** that learns from historical car data and predicts the estimated price of a car.
 
-Backend
+The main objectives of this project are:
 
-FastAPI
-Uvicorn
+- Data Cleaning and Preprocessing
+- Exploratory Data Analysis (EDA)
+- Feature Engineering
+- Model Training
+- Price Prediction
 
-Frontend
+---
 
-Streamlit
+## 🧠 Machine Learning Workflow
 
-Deployment
+The following steps were followed in this project:
 
-Backend: Render
-Frontend: Streamlit Cloud
+1. Data Collection
+2. Data Cleaning
+3. Exploratory Data Analysis (EDA)
+4. Feature Encoding
+5. Model Training
+6. Model Evaluation
+7. Saving the trained model
 
-⚙️ How It Works
-
-User enters car details on the Streamlit UI
-Streamlit sends a POST request to the FastAPI backend
-FastAPI loads the trained ML pipeline
-The model predicts the car price
-Prediction is returned and displayed on the UI
-
-▶️ How to Run the Project Locally
-🔹 Backend (FastAPI)
-
-Clone the backend repository
-
-git clone https://github.com/amits-1729/car-price-backend.git
-cd car-price-backend
+---
 
 
-Create and activate a virtual environment
+---
 
-python -m venv venv
-venv\Scripts\activate
+## 📊 Features Used for Prediction
 
+The model predicts car prices using the following features:
 
-Install dependencies
+- Company
+- Model
+- Year
+- Fuel Type
+- Kilometers Driven
 
-pip install -r requirements.txt
+---
 
+## ⚙️ Technologies Used
 
-Run the FastAPI server
+- Python
+- NumPy
+- Pandas
+- Scikit-learn
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
 
-python -m uvicorn main:app --reload --port 8080
+---
 
+## 🏗 Model Used
 
-Open API docs:
+A **Machine Learning Regression Model** is used to predict car prices.
 
-http://127.0.0.1:8080/docs
+Possible algorithms used:
 
-🔹 Frontend (Streamlit)
+- Linear Regression
+- Decision Tree Regressor
+- Random Forest Regressor
 
-Clone the frontend repository
+The trained model is saved using **pickle (.pkl)** for future predictions.
 
-git clone https://github.com/your-username/car-price-frontend.git
-cd car-price-frontend
+---
 
+## 🎯 Learning Outcomes
 
-Create and activate a virtual environment
+Through this project I learned:
 
-python -m venv venv
-venv\Scripts\activate
+- Data preprocessing techniques
+- Feature engineering
+- Regression modeling
+- Model evaluation
+- Saving machine learning models using pickle
 
+---
 
-Install dependencies
-
-pip install -r requirements.txt
-
-
-Run the Streamlit app
-
-streamlit run app.py
